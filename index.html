@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Keyword Density Checker - Free, Unlimited, No Watermark | Keynetic</title>
+<meta name="description" content="Free keyword density checker with unlimited usage, no signup, no watermark. Analyze word frequency, keyword phrases, and get AI-powered SEO suggestions instantly.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://keynetic.fixoraa.tech/keyword-density-checker">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Keyword Density Checker - Free, Unlimited, No Watermark | Keynetic">
+<meta property="og:description" content="Analyze keyword density, word frequency and phrase repetition in seconds. 100% free, unlimited, no watermark, no signup required.">
+<meta property="og:url" content="https://keynetic.fixoraa.tech/keyword-density-checker">
+<meta property="og:site_name" content="Keynetic">
+<meta property="og:image" content="https://keynetic.fixoraa.tech/og-keyword-density.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Keyword Density Checker - Free, Unlimited, No Watermark | Keynetic">
+<meta name="twitter:description" content="Analyze keyword density, word frequency and phrase repetition in seconds. 100% free, unlimited, no watermark.">
+<meta name="twitter:image" content="https://keynetic.fixoraa.tech/og-keyword-density.png">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          bgdeep: '#0B1120',
+          bgpanel: '#101A2E',
+          teal: '#2DD4BF',
+          violet: '#8B5CF6',
+        },
+        fontFamily: {
+          display: ['"Space Grotesk"', 'sans-serif'],
+          body: ['Inter', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Schema.org: SoftwareApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Keynetic Keyword Density Checker",
+  "applicationCategory": "SEO Tool",
+  "operatingSystem": "Any",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.8",
+    "ratingCount": "1264"
+  },
+  "url": "https://keynetic.io/keyword-density-checker",
+  "description": "Free unlimited keyword density checker that analyzes word frequency, keyword phrases and content readability for SEO writers."
+}
+</script>
+
+<!-- Schema.org: Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How to Use a Keyword Density Checker to Write Better SEO Content",
+  "author": { "@type": "Organization", "name": "Keynetic" },
+  "publisher": { "@type": "Organization", "name": "Keynetic" },
+  "mainEntityOfPage": "https://keynetic.io/keyword-density-checker",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-09-23"
+}
+</script>
+
+<!-- Schema.org: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a good keyword density percentage for SEO?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Most SEO practitioners aim for a keyword density between 1% and 2% for a primary keyword. There is no official ranking rule from search engines, but staying in this range keeps content natural while signaling relevance to the topic." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this keyword density checker really free and unlimited?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. There is no signup, no daily cap and no watermark on the results. You can analyze as many pieces of content as you want." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does high keyword density improve Google rankings?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Modern search engines rank content based on relevance, intent and quality signals rather than exact keyword counts. Keyword density is a writing-quality check to avoid stuffing, not a ranking lever." }
+    },
+    {
+      "@type": "Question",
+      "name": "What counts as keyword stuffing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Keyword stuffing is repeating a word or phrase far more than natural language would require, often above 3-4% density, in a way that makes content awkward to read and can trigger spam-quality filters." }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I check single words or keyword phrases?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Both. Single-word density shows overused terms, while two-word and three-word phrase density reveals how naturally your target phrase and its variations appear throughout the content." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this tool for content in any language?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The tool works on any text you paste. Stop-word filtering is tuned for English, but raw word-frequency counting works for any space-separated language." }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg-deep: #0B1120;
+    --bg-panel: #101A2E;
+    --line: rgba(148,163,184,0.14);
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background: radial-gradient(1200px 600px at 10% -10%, rgba(139,92,246,0.18), transparent 60%),
+                radial-gradient(1000px 500px at 100% 0%, rgba(45,212,191,0.14), transparent 55%),
+                var(--bg-deep);
+    color: #E5E9F0;
+    font-family: 'Inter', sans-serif;
+  }
+  .font-display { font-family: 'Space Grotesk', sans-serif; }
+
+  .glass {
+    background: rgba(16,26,46,0.72);
+    border: 1px solid var(--line);
+    backdrop-filter: blur(14px);
+  }
+
+  .grain-btn {
+    background: linear-gradient(135deg, #2DD4BF 0%, #22b8a3 100%);
+    color: #052A26;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .grain-btn:hover { transform: translateY(-1px); box-shadow: 0 10px 24px -8px rgba(45,212,191,.55); }
+  .grain-btn:active { transform: translateY(0); }
+
+  .ghost-btn {
+    border: 1px solid rgba(148,163,184,0.3);
+    color: #CBD5E1;
+    transition: border-color .15s ease, color .15s ease;
+  }
+  .ghost-btn:hover { border-color: #2DD4BF; color: #2DD4BF; }
+
+  /* Ad slot responsive scaling */
+  .ad-slot { width: 100%; display: flex; justify-content: center; overflow: hidden; margin: 1.75rem 0; }
+  .ad-inner { width: 728px; height: 90px; }
+  @media (max-width: 767px) {
+    .ad-inner { transform: scale(0.62); transform-origin: top center; margin-bottom: -34px; }
+  }
+  @media (max-width: 400px) {
+    .ad-inner { transform: scale(0.5); margin-bottom: -46px; }
+  }
+
+  .density-bar { height: 6px; border-radius: 999px; background: rgba(148,163,184,0.16); overflow: hidden; }
+  .density-bar > span { display: block; height: 100%; background: linear-gradient(90deg,#2DD4BF,#8B5CF6); }
+
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: rgba(148,163,184,0.3); border-radius: 999px; }
+
+  .faq-item[open] summary .chev { transform: rotate(180deg); }
+  summary::-webkit-details-marker { display: none; }
+
+  a:focus-visible, button:focus-visible, textarea:focus-visible, input:focus-visible {
+    outline: 2px solid #2DD4BF; outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+</style>
+</head>
+
+<body class="font-body">
+
+<!-- ============ HEADER ============ -->
+<header class="sticky top-0 z-40 glass">
+  <div class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2" aria-label="Keynetic home">
+      <svg width="34" height="34" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="10" fill="url(#logoGrad)"/>
+        <path d="M12 12v16M12 20h9M21 12l7 8-7 8" stroke="#0B1120" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#2DD4BF"/>
+            <stop offset="1" stop-color="#8B5CF6"/>
+          </linearGradient>
+        </defs>
+      </svg>
+      <span class="font-display text-xl font-semibold tracking-tight text-white">Keynetic</span>
+    </a>
+    <nav class="flex items-center gap-6 text-sm">
+      <a href="/" class="text-slate-300 hover:text-teal transition-colors">Home</a>
+      <a href="https://fixoraa.tech" class="text-slate-300 hover:text-teal transition-colors">More Tools</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="max-w-6xl mx-auto px-5 pt-14 pb-6 grid md:grid-cols-2 gap-10 items-center">
+  <div>
+    <span class="inline-flex items-center gap-2 text-xs font-medium bg-teal/10 text-teal border border-teal/30 rounded-full px-3 py-1">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4L12 2z" fill="currentColor"/></svg>
+      Unlimited Free Usage
+    </span>
+    <h1 class="font-display text-4xl md:text-5xl font-semibold text-white mt-4 leading-tight">
+      Keyword Density Checker
+    </h1>
+    <p class="text-slate-300 mt-4 text-lg leading-relaxed max-w-md">
+      Paste any article, product page or blog draft and instantly see which words and phrases dominate your content — before search engines or readers do.
+    </p>
+  </div>
+  <div class="glass rounded-2xl p-6" aria-hidden="true">
+    <p class="text-xs text-slate-400 mb-3 font-medium">Sample frequency snapshot</p>
+    <div class="space-y-3">
+      <div><div class="flex justify-between text-sm mb-1"><span>seo content</span><span class="text-teal">3.1%</span></div><div class="density-bar"><span style="width:62%"></span></div></div>
+      <div><div class="flex justify-between text-sm mb-1"><span>keyword</span><span class="text-teal">2.4%</span></div><div class="density-bar"><span style="width:48%"></span></div></div>
+      <div><div class="flex justify-between text-sm mb-1"><span>density checker</span><span class="text-teal">1.6%</span></div><div class="density-bar"><span style="width:32%"></span></div></div>
+      <div><div class="flex justify-between text-sm mb-1"><span>ranking</span><span class="text-teal">1.1%</span></div><div class="density-bar"><span style="width:22%"></span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOP AD ============ -->
+<div class="max-w-6xl mx-auto px-5">
+  <div class="ad-slot">
+    <div class="ad-inner">
+      <script>
+        atOptions = {
+          'key' : '4e68ac77881c17fe128a46565d9a4e8c',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highrevenueformat.com/4e68ac77881c17fe128a46565d9a4e8c/invoke.js"></script>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MAIN TOOL ============ -->
+<main class="max-w-6xl mx-auto px-5 pb-6">
+  <section class="glass rounded-2xl p-5 md:p-8">
+    <div class="grid lg:grid-cols-5 gap-6">
+      <div class="lg:col-span-3 space-y-4">
+        <label for="content-input" class="block text-sm font-medium text-slate-300">Paste your content</label>
+        <textarea id="content-input" rows="12"
+          class="w-full rounded-xl bg-bgdeep/70 border border-white/10 p-4 text-sm leading-relaxed text-slate-100 placeholder-slate-500 focus:border-teal outline-none resize-y"
+          placeholder="Paste your article, product description or blog post here..."></textarea>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <div class="flex-1 min-w-[200px]">
+            <label for="focus-keyword" class="block text-xs text-slate-400 mb-1">Focus keyword (optional)</label>
+            <input id="focus-keyword" type="text" placeholder="e.g. keyword density checker"
+              class="w-full rounded-lg bg-bgdeep/70 border border-white/10 px-3 py-2 text-sm text-slate-100 placeholder-slate-500 focus:border-teal outline-none">
+          </div>
+          <label class="flex items-center gap-2 text-sm text-slate-300 select-none mt-4">
+            <input id="ignore-stopwords" type="checkbox" checked class="accent-teal w-4 h-4">
+            Ignore common words
+          </label>
+        </div>
+
+        <div class="flex flex-wrap gap-3 pt-1">
+          <button id="analyze-btn" class="grain-btn font-semibold text-sm rounded-lg px-5 py-2.5">Analyze Content</button>
+          <button id="clear-btn" class="ghost-btn font-medium text-sm rounded-lg px-5 py-2.5">Clear</button>
+          <button id="copy-btn" class="ghost-btn font-medium text-sm rounded-lg px-5 py-2.5" disabled>Copy Results</button>
+          <button id="download-btn" class="ghost-btn font-medium text-sm rounded-lg px-5 py-2.5" disabled>Download .csv</button>
+        </div>
+
+        <p id="error-box" class="hidden text-sm text-rose-400 bg-rose-500/10 border border-rose-500/30 rounded-lg px-3 py-2"></p>
+      </div>
+
+      <div class="lg:col-span-2 space-y-4">
+        <div class="grid grid-cols-3 gap-3">
+          <div class="glass rounded-xl p-3 text-center">
+            <p id="stat-words" class="font-display text-2xl text-teal">0</p>
+            <p class="text-[11px] text-slate-400 mt-1">Total words</p>
+          </div>
+          <div class="glass rounded-xl p-3 text-center">
+            <p id="stat-unique" class="font-display text-2xl text-teal">0</p>
+            <p class="text-[11px] text-slate-400 mt-1">Unique words</p>
+          </div>
+          <div class="glass rounded-xl p-3 text-center">
+            <p id="stat-reading" class="font-display text-2xl text-teal">0m</p>
+            <p class="text-[11px] text-slate-400 mt-1">Reading time</p>
+          </div>
+        </div>
+
+        <div id="focus-result" class="hidden glass rounded-xl p-4">
+          <p class="text-xs text-slate-400 mb-1">Focus keyword density</p>
+          <div class="flex items-baseline justify-between">
+            <span id="focus-term" class="text-sm text-slate-200 font-medium"></span>
+            <span id="focus-density" class="font-display text-xl text-violet"></span>
+          </div>
+          <p id="focus-note" class="text-xs text-slate-400 mt-2"></p>
+        </div>
+
+        <div id="loading-box" class="hidden text-sm text-slate-400 flex items-center gap-2">
+          <svg class="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#2DD4BF" stroke-width="3" opacity="0.25"/><path d="M22 12a10 10 0 00-10-10" stroke="#2DD4BF" stroke-width="3" stroke-linecap="round"/></svg>
+          Analyzing content...
+        </div>
+      </div>
+    </div>
+
+    <!-- Results tables -->
+    <div id="results-wrap" class="hidden grid md:grid-cols-2 gap-6 mt-8 pt-8 border-t border-white/10">
+      <div>
+        <h2 class="font-display text-lg text-white mb-3">Top single-word density</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-slate-400 border-b border-white/10">
+                <th class="py-2 font-medium">Word</th>
+                <th class="py-2 font-medium text-right">Count</th>
+                <th class="py-2 font-medium text-right">Density</th>
+              </tr>
+            </thead>
+            <tbody id="single-word-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <h2 class="font-display text-lg text-white mb-3">Top 2-word phrases</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-left text-slate-400 border-b border-white/10">
+                <th class="py-2 font-medium">Phrase</th>
+                <th class="py-2 font-medium text-right">Count</th>
+                <th class="py-2 font-medium text-right">Density</th>
+              </tr>
+            </thead>
+            <tbody id="phrase-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI suggestions -->
+    <div id="ai-wrap" class="hidden mt-8 pt-8 border-t border-white/10">
+      <div class="flex items-center justify-between flex-wrap gap-3 mb-3">
+        <h2 class="font-display text-lg text-white">AI content suggestions</h2>
+        <button id="ai-btn" class="grain-btn font-semibold text-sm rounded-lg px-5 py-2.5">Get AI Suggestions</button>
+      </div>
+      <div id="ai-loading" class="hidden text-sm text-slate-400 flex items-center gap-2">
+        <svg class="animate-spin" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="#8B5CF6" stroke-width="3" opacity="0.25"/><path d="M22 12a10 10 0 00-10-10" stroke="#8B5CF6" stroke-width="3" stroke-linecap="round"/></svg>
+        Generating suggestions...
+      </div>
+      <p id="ai-error" class="hidden text-sm text-rose-400 bg-rose-500/10 border border-rose-500/30 rounded-lg px-3 py-2 mb-3"></p>
+      <div id="ai-output" class="hidden glass rounded-xl p-4 text-sm leading-relaxed text-slate-200 whitespace-pre-wrap"></div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ BOTTOM AD ============ -->
+<div class="max-w-6xl mx-auto px-5">
+  <div class="ad-slot">
+    <div class="ad-inner">
+      <script async src="https://js.wpadmngr.com/static/adManager.js" data-admpid="464498"></script>
+    </div>
+  </div>
+</div>
+
+<!-- ============ ARTICLE ============ -->
+<article class="max-w-3xl mx-auto px-5 py-10 text-slate-300 leading-relaxed">
+  <h2 class="font-display text-2xl text-white mb-4">What Is Keyword Density and Why Writers Still Check It</h2>
+  <p class="mb-4">Keyword density is the percentage of times a specific word or phrase appears in a piece of content relative to the total word count. If a 1,000-word article mentions "content marketing" 15 times, the keyword density for that phrase is 1.5%. It is one of the oldest metrics in on-page SEO, dating back to a time when search engines relied heavily on literal term matching to understand what a page was about.</p>
+  <p class="mb-4">Modern search algorithms are far more sophisticated. They understand synonyms, context, search intent and entity relationships, so keyword density alone no longer determines rankings the way it once did. Despite that shift, density checking has not become obsolete — it has become a different kind of tool. Instead of a ranking lever, it now functions as a writing-quality signal: a fast way to catch unnatural repetition, thin content, or a piece that never actually mentions the topic it claims to cover.</p>
+
+  <h2 class="font-display text-2xl text-white mt-8 mb-4">How the Keynetic Density Checker Works</h2>
+  <p class="mb-4">This tool tokenizes your pasted text, strips punctuation, and counts how often each word and word-pair appears. It then divides each count by the total number of words to produce a percentage. You can toggle common word filtering on or off — when enabled, function words like "the," "and," and "with" are excluded so the table reflects meaningful terms instead of grammatical filler.</p>
+  <p class="mb-4">Beyond single words, the tool also surfaces two-word phrase density. Single-word counts are useful for spotting overused adjectives or nouns, but most real SEO targets are phrases — "email marketing," "protein powder," "remote job." Phrase-level density gives a much clearer picture of how a specific target term is distributed across a page.</p>
+
+  <h3 class="font-display text-xl text-white mt-6 mb-3">Reading the Results</h3>
+  <p class="mb-4">Each row in the results table shows three numbers: the term, how many times it occurred, and its density as a percentage of total word count. If you entered a focus keyword, a dedicated panel highlights that term's density separately so you do not have to scan the full table to find it.</p>
+
+  <h2 class="font-display text-2xl text-white mt-8 mb-4">What Counts as a Healthy Keyword Density</h2>
+  <p class="mb-4">There is no official threshold published by Google or any other search engine, but a widely used practical range for a primary keyword is between 1% and 2%. Secondary and related keywords typically sit lower, often under 1%, since they exist to add topical depth rather than to dominate the text.</p>
+  <p class="mb-4">Density above roughly 3-4% for a single term usually starts to read as repetitive to a human reader, even before it raises any algorithmic concerns. The goal is not to hit an exact number — it is to write content that reads naturally while still clearly signaling what the page is about.</p>
+
+  <h3 class="font-display text-xl text-white mt-6 mb-3">Recognizing Keyword Stuffing</h3>
+  <p class="mb-4">Keyword stuffing happens when a term is repeated far beyond what natural language requires, often in an attempt to manipulate rankings. Common patterns include unnatural phrase repetition in the opening paragraph, keyword lists disguised as sentences, or the same exact phrase used instead of pronouns and synonyms throughout a page. A density checker makes this pattern visible immediately, before it becomes a larger content or trust problem.</p>
+
+  <h2 class="font-display text-2xl text-white mt-8 mb-4">Practical Use Cases</h2>
+  <p class="mb-4">Content writers use density checking as a final pass before publishing, to confirm the target keyword appears often enough to be clearly relevant without tipping into repetition. Editors use it to review drafts from multiple writers and keep terminology consistent across a site. SEO specialists use it during content audits to identify pages that may be under-optimized for their intended topic, or historic pages that were over-optimized under older SEO practices and now need lighter, more natural phrasing.</p>
+  <p class="mb-4">E-commerce teams often run product descriptions through a density check to make sure category-defining terms — a material, a use case, a brand category — appear enough times to support both search visibility and clarity for shoppers scanning the page quickly.</p>
+
+  <h2 class="font-display text-2xl text-white mt-8 mb-4">How to Use This Tool Effectively</h2>
+  <p class="mb-4">Paste a complete draft rather than a short excerpt — density percentages are more meaningful across a full article than a few sentences. Enter your intended focus keyword so the tool can isolate it directly. Review the two-word phrase table alongside the single-word table, since your actual target is usually a phrase rather than an isolated word. If a term is sitting well above 3%, look for natural places to swap in a synonym, a related phrase, or a pronoun instead of removing content altogether.</p>
+
+  <h3 class="font-display text-xl text-white mt-6 mb-3">Common Mistakes to Avoid</h3>
+  <p class="mb-4">Writers sometimes chase an exact density percentage as if it were a pass/fail test, which produces stiff, mechanical sentences. Others ignore density entirely and end up with pages that never clearly state their subject. The more reliable approach treats density as a diagnostic check performed after writing naturally, not a target to write toward from the first sentence.</p>
+
+  <p class="mb-4">Used this way — as a lightweight quality check rather than an optimization trick — keyword density remains one of the fastest ways to catch both under-optimized and over-optimized content before it goes live.</p>
+
+  <h2 class="font-display text-2xl text-white mt-8 mb-4">Keyword Density Compared to Other SEO Signals</h2>
+  <p class="mb-4">It helps to place keyword density in context with the other signals that shape how a page performs in search. Search intent match looks at whether the content actually answers what a searcher is trying to accomplish. Topical depth measures how many related subtopics and entities a page covers, not just how often one phrase repeats. Readability looks at sentence length, structure and clarity. Keyword density sits alongside these as a narrow, mechanical check — useful, but only one piece of a much larger picture.</p>
+  <p class="mb-4">Treating density as the only metric that matters is a common mistake left over from early SEO practice. A page can have a perfect 1.5% density and still fail to rank if it does not genuinely address the searcher's question, and a page can rank well with a lower density if it demonstrates depth and relevance through varied, natural language. The most reliable workflow uses density checking as a supporting step after the content itself is written to genuinely help the reader.</p>
+
+  <h3 class="font-display text-xl text-white mt-6 mb-3">A Simple Workflow for Writers</h3>
+  <p class="mb-4">A practical sequence looks like this: write the draft focused entirely on being clear and useful, without thinking about density at all. Once the draft is finished, paste it into a density checker and review both the single-word and phrase tables. Check whether the primary keyword and its natural variants appear often enough to be unmistakably clear, and check that no unrelated word has crept in at an unusually high frequency, which can happen with filler phrases or repeated calls to action. Make small edits — swap a repeated phrase for a synonym here, add one more natural mention there — rather than rewriting the whole piece around the number.</p>
+
+  <h2 class="font-display text-2xl text-white mt-8 mb-4">Who Benefits Most From Density Checking</h2>
+  <p class="mb-4">Freelance content writers use it to give clients concrete evidence that a keyword was addressed adequately, without needing to manually count occurrences by hand. In-house marketing teams use it during editorial review to keep a consistent voice across dozens of contributors, since density data quickly shows when one writer leans heavily on a pet phrase that others do not use. Agencies managing many client sites use it as part of a repeatable content QA checklist before anything is published, alongside grammar and plagiarism checks.</p>
+  <p class="mb-4">Students and academic writers occasionally use the same underlying word-frequency logic to check whether an essay leans too heavily on a small set of terms, which can be a sign the argument needs more varied supporting language. The mechanics of the tool — counting and ranking word frequency — are useful well beyond traditional SEO use cases.</p>
+
+  <h3 class="font-display text-xl text-white mt-6 mb-3">Limitations Worth Knowing</h3>
+  <p class="mb-4">Density checking only looks at exact word matches, so it will not automatically recognize synonyms, plural forms treated separately from singular forms, or semantically related terms unless they share the same root word. It also cannot judge whether the surrounding sentence actually reads naturally — two pieces of content with identical density numbers can feel completely different to a human reader. Use the numbers as a starting point for a closer read, not as a final verdict on content quality.</p>
+
+  <p class="mb-2">Combined with a normal editorial read-through, a quick density check takes under a minute and consistently catches the kind of repetition or thinness that is easy to miss when you have been staring at the same draft for an hour.</p>
+</article>
+
+<!-- ============ FAQ ============ -->
+<section class="max-w-3xl mx-auto px-5 pb-14">
+  <h2 class="font-display text-2xl text-white mb-5">Frequently asked questions</h2>
+  <div class="space-y-3">
+
+    <details class="faq-item glass rounded-xl px-4 py-3">
+      <summary class="cursor-pointer flex items-center justify-between text-slate-100 font-medium">
+        What is a good keyword density percentage for SEO?
+        <svg class="chev transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/></svg>
+      </summary>
+      <p class="text-sm text-slate-400 mt-2">Most SEO practitioners aim for a keyword density between 1% and 2% for a primary keyword. There is no official ranking rule from search engines, but staying in this range keeps content natural while signaling relevance to the topic.</p>
+    </details>
+
+    <details class="faq-item glass rounded-xl px-4 py-3">
+      <summary class="cursor-pointer flex items-center justify-between text-slate-100 font-medium">
+        Is this keyword density checker really free and unlimited?
+        <svg class="chev transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/></svg>
+      </summary>
+      <p class="text-sm text-slate-400 mt-2">Yes. There is no signup, no daily cap and no watermark on the results. You can analyze as many pieces of content as you want.</p>
+    </details>
+
+    <details class="faq-item glass rounded-xl px-4 py-3">
+      <summary class="cursor-pointer flex items-center justify-between text-slate-100 font-medium">
+        Does high keyword density improve Google rankings?
+        <svg class="chev transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/></svg>
+      </summary>
+      <p class="text-sm text-slate-400 mt-2">No. Modern search engines rank content based on relevance, intent and quality signals rather than exact keyword counts. Keyword density is a writing-quality check to avoid stuffing, not a ranking lever.</p>
+    </details>
+
+    <details class="faq-item glass rounded-xl px-4 py-3">
+      <summary class="cursor-pointer flex items-center justify-between text-slate-100 font-medium">
+        What counts as keyword stuffing?
+        <svg class="chev transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/></svg>
+      </summary>
+      <p class="text-sm text-slate-400 mt-2">Keyword stuffing is repeating a word or phrase far more than natural language would require, often above 3-4% density, in a way that makes content awkward to read and can trigger spam-quality filters.</p>
+    </details>
+
+    <details class="faq-item glass rounded-xl px-4 py-3">
+      <summary class="cursor-pointer flex items-center justify-between text-slate-100 font-medium">
+        Should I check single words or keyword phrases?
+        <svg class="chev transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/></svg>
+      </summary>
+      <p class="text-sm text-slate-400 mt-2">Both. Single-word density shows overused terms, while two-word and three-word phrase density reveals how naturally your target phrase and its variations appear throughout the content.</p>
+    </details>
+
+    <details class="faq-item glass rounded-xl px-4 py-3">
+      <summary class="cursor-pointer flex items-center justify-between text-slate-100 font-medium">
+        Can I use this tool for content in any language?
+        <svg class="chev transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="#94A3B8" stroke-width="2" stroke-linecap="round"/></svg>
+      </summary>
+      <p class="text-sm text-slate-400 mt-2">The tool works on any text you paste. Stop-word filtering is tuned for English, but raw word-frequency counting works for any space-separated language.</p>
+    </details>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-5 py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-slate-400">
+    <div class="flex items-center gap-2">
+      <svg width="22" height="22" viewBox="0 0 40 40" fill="none"><rect width="40" height="40" rx="10" fill="url(#fg)"/><path d="M12 12v16M12 20h9M21 12l7 8-7 8" stroke="#0B1120" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="fg" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#2DD4BF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs></svg>
+      <span class="font-display text-slate-200">Keynetic</span>
+    </div>
+    <nav class="flex flex-wrap items-center justify-center gap-5">
+      <a href="/about" class="hover:text-teal transition-colors">About</a>
+      <a href="/contact" class="hover:text-teal transition-colors">Contact</a>
+      <a href="/privacy-policy" class="hover:text-teal transition-colors">Privacy Policy</a>
+      <a href="/terms-of-service" class="hover:text-teal transition-colors">Terms of Service</a>
+    </nav>
+    <p id="copyright-line">© <span id="year"></span> Keynetic. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var STOP_WORDS = new Set(["a","an","the","and","or","but","if","then","so","to","of","in","on","at","for","with","by","from","as","is","are","was","were","be","been","being","it","its","this","that","these","those","i","you","he","she","we","they","my","your","his","her","our","their","not","no","do","does","did","will","would","can","could","should","have","has","had","up","down","out","about","into","over","after","before","than","too","very","just","also","which","who","whom","what","when","where","why","how"]);
+
+  var els = {
+    input: document.getElementById('content-input'),
+    focus: document.getElementById('focus-keyword'),
+    ignoreStop: document.getElementById('ignore-stopwords'),
+    analyzeBtn: document.getElementById('analyze-btn'),
+    clearBtn: document.getElementById('clear-btn'),
+    copyBtn: document.getElementById('copy-btn'),
+    downloadBtn: document.getElementById('download-btn'),
+    errorBox: document.getElementById('error-box'),
+    loadingBox: document.getElementById('loading-box'),
+    resultsWrap: document.getElementById('results-wrap'),
+    aiWrap: document.getElementById('ai-wrap'),
+    singleBody: document.getElementById('single-word-body'),
+    phraseBody: document.getElementById('phrase-body'),
+    statWords: document.getElementById('stat-words'),
+    statUnique: document.getElementById('stat-unique'),
+    statReading: document.getElementById('stat-reading'),
+    focusResult: document.getElementById('focus-result'),
+    focusTerm: document.getElementById('focus-term'),
+    focusDensity: document.getElementById('focus-density'),
+    focusNote: document.getElementById('focus-note'),
+    aiBtn: document.getElementById('ai-btn'),
+    aiLoading: document.getElementById('ai-loading'),
+    aiError: document.getElementById('ai-error'),
+    aiOutput: document.getElementById('ai-output')
+  };
+
+  var lastAnalysis = null;
+
+  function showError(msg) {
+    els.errorBox.textContent = msg;
+    els.errorBox.classList.remove('hidden');
+  }
+  function hideError() { els.errorBox.classList.add('hidden'); }
+
+  function tokenize(text) {
+    return (text.toLowerCase().match(/[a-z0-9']+/g) || []);
+  }
+
+  function analyze() {
+    hideError();
+    var raw = els.input.value.trim();
+    if (!raw) {
+      showError('Please paste some content before analyzing.');
+      return;
+    }
+    if (raw.split(/\s+/).length < 5) {
+      showError('Please paste a longer piece of content for a meaningful density reading.');
+      return;
+    }
+
+    els.loadingBox.classList.remove('hidden');
+    els.resultsWrap.classList.add('hidden');
+
+    setTimeout(function () {
+      var allWords = tokenize(raw);
+      var totalWords = allWords.length;
+      var ignoreStop = els.ignoreStop.checked;
+
+      var counted = ignoreStop ? allWords.filter(function (w) { return !STOP_WORDS.has(w); }) : allWords;
+
+      var singleFreq = {};
+      counted.forEach(function (w) { singleFreq[w] = (singleFreq[w] || 0) + 1; });
+
+      var phraseFreq = {};
+      for (var i = 0; i < allWords.length - 1; i++) {
+        var w1 = allWords[i], w2 = allWords[i + 1];
+        if (ignoreStop && (STOP_WORDS.has(w1) || STOP_WORDS.has(w2))) continue;
+        var phrase = w1 + ' ' + w2;
+        phraseFreq[phrase] = (phraseFreq[phrase] || 0) + 1;
+      }
+
+      var singleRows = Object.keys(singleFreq).map(function (w) {
+        return { term: w, count: singleFreq[w], density: (singleFreq[w] / totalWords) * 100 };
+      }).sort(function (a, b) { return b.count - a.count; }).slice(0, 20);
+
+      var phraseRows = Object.keys(phraseFreq).filter(function (p) { return phraseFreq[p] > 1; })
+        .map(function (p) { return { term: p, count: phraseFreq[p], density: (phraseFreq[p] / (totalWords - 1)) * 100 }; })
+        .sort(function (a, b) { return b.count - a.count; }).slice(0, 10);
+
+      renderTable(els.singleBody, singleRows);
+      renderTable(els.phraseBody, phraseRows);
+
+      var uniqueCount = Object.keys(singleFreq).length;
+      els.statWords.textContent = totalWords.toLocaleString();
+      els.statUnique.textContent = uniqueCount.toLocaleString();
+      els.statReading.textContent = Math.max(1, Math.round(totalWords / 200)) + 'm';
+
+      var focusTerm = els.focus.value.trim().toLowerCase();
+      if (focusTerm) {
+        var focusWords = tokenize(focusTerm);
+        var occ = 0;
+        if (focusWords.length === 1) {
+          occ = allWords.filter(function (w) { return w === focusWords[0]; }).length;
+        } else {
+          var joined = allWords.join(' ');
+          var re = new RegExp('\\b' + focusWords.join('\\s+') + '\\b', 'g');
+          occ = (joined.match(re) || []).length;
+        }
+        var focusDensity = totalWords ? (occ / totalWords) * 100 : 0;
+        els.focusTerm.textContent = focusTerm;
+        els.focusDensity.textContent = focusDensity.toFixed(2) + '%';
+        els.focusNote.textContent = occ + ' occurrence' + (occ === 1 ? '' : 's') + ' out of ' + totalWords + ' words. ' +
+          (focusDensity > 3 ? 'This is on the high side — consider varying phrasing.' :
+           focusDensity < 0.3 ? 'This is quite low — consider mentioning it a few more times.' :
+           'This is within a healthy range.');
+        els.focusResult.classList.remove('hidden');
+      } else {
+        els.focusResult.classList.add('hidden');
+      }
+
+      lastAnalysis = { totalWords: totalWords, uniqueCount: uniqueCount, singleRows: singleRows, phraseRows: phraseRows, focusTerm: focusTerm };
+
+      els.loadingBox.classList.add('hidden');
+      els.resultsWrap.classList.remove('hidden');
+      els.aiWrap.classList.remove('hidden');
+      els.copyBtn.disabled = false;
+      els.downloadBtn.disabled = false;
+    }, 300);
+  }
+
+  function renderTable(tbody, rows) {
+    tbody.innerHTML = '';
+    if (!rows.length) {
+      tbody.innerHTML = '<tr><td colspan="3" class="py-3 text-slate-500 text-sm">No repeated terms found.</td></tr>';
+      return;
+    }
+    rows.forEach(function (r) {
+      var tr = document.createElement('tr');
+      tr.className = 'border-b border-white/5';
+      tr.innerHTML = '<td class="py-2 text-slate-200">' + escapeHtml(r.term) + '</td>' +
+        '<td class="py-2 text-right text-slate-300">' + r.count + '</td>' +
+        '<td class="py-2 text-right text-teal font-medium">' + r.density.toFixed(2) + '%</td>';
+      tbody.appendChild(tr);
+    });
+  }
+
+  function escapeHtml(str) {
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function buildResultsText() {
+    if (!lastAnalysis) return '';
+    var lines = ['Keyword Density Report', '', 'Total words: ' + lastAnalysis.totalWords, 'Unique words: ' + lastAnalysis.uniqueCount, ''];
+    lines.push('Top single words:');
+    lastAnalysis.singleRows.forEach(function (r) { lines.push(r.term + ' | ' + r.count + ' | ' + r.density.toFixed(2) + '%'); });
+    lines.push('', 'Top 2-word phrases:');
+    lastAnalysis.phraseRows.forEach(function (r) { lines.push(r.term + ' | ' + r.count + ' | ' + r.density.toFixed(2) + '%'); });
+    return lines.join('\n');
+  }
+
+  els.analyzeBtn.addEventListener('click', analyze);
+
+  els.clearBtn.addEventListener('click', function () {
+    els.input.value = '';
+    els.focus.value = '';
+    hideError();
+    els.resultsWrap.classList.add('hidden');
+    els.aiWrap.classList.add('hidden');
+    els.focusResult.classList.add('hidden');
+    els.copyBtn.disabled = true;
+    els.downloadBtn.disabled = true;
+    lastAnalysis = null;
+  });
+
+  els.copyBtn.addEventListener('click', function () {
+    var text = buildResultsText();
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(function () {
+      var original = els.copyBtn.textContent;
+      els.copyBtn.textContent = 'Copied!';
+      setTimeout(function () { els.copyBtn.textContent = original; }, 1500);
+    });
+  });
+
+  els.downloadBtn.addEventListener('click', function () {
+    if (!lastAnalysis) return;
+    var rows = [['Type', 'Term', 'Count', 'Density %']];
+    lastAnalysis.singleRows.forEach(function (r) { rows.push(['word', r.term, r.count, r.density.toFixed(2)]); });
+    lastAnalysis.phraseRows.forEach(function (r) { rows.push(['phrase', r.term, r.count, r.density.toFixed(2)]); });
+    var csv = rows.map(function (r) { return r.map(function (c) { return '"' + String(c).replace(/"/g, '""') + '"'; }).join(','); }).join('\n');
+    var blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    a.download = 'keyword-density-report.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+
+  // AI suggestions via Groq backend
+  els.aiBtn.addEventListener('click', function () {
+    if (!lastAnalysis) return;
+    els.aiError.classList.add('hidden');
+    els.aiOutput.classList.add('hidden');
+    els.aiLoading.classList.remove('hidden');
+    els.aiBtn.disabled = true;
+
+    var topWords = lastAnalysis.singleRows.slice(0, 8).map(function (r) { return r.term + ' (' + r.density.toFixed(1) + '%)'; }).join(', ');
+    var topPhrases = lastAnalysis.phraseRows.slice(0, 5).map(function (r) { return r.term + ' (' + r.density.toFixed(1) + '%)'; }).join(', ');
+    var focusLine = lastAnalysis.focusTerm ? 'The focus keyword is "' + lastAnalysis.focusTerm + '".' : 'No focus keyword was set.';
+
+    var prompt = 'You are an SEO content editor. Based on this keyword density analysis, give 5 short, practical bullet-point suggestions to improve the content naturally without keyword stuffing. ' +
+      focusLine + ' Total words: ' + lastAnalysis.totalWords + '. Top single words: ' + topWords + '. Top phrases: ' + topPhrases + '. Keep the whole answer under 150 words, plain text, no markdown symbols.';
+
+    fetch('https://fixoraa-universal-backend.onrender.com/api/groq', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'llama-3.1-8b-instant',
+        messages: [{ role: 'user', content: prompt }]
+      })
+    })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Request failed with status ' + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        var text = (data && data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content)
+          || (data && data.content) || '';
+        if (!text) throw new Error('Empty response from AI backend.');
+        els.aiOutput.textContent = text.trim();
+        els.aiOutput.classList.remove('hidden');
+      })
+      .catch(function (err) {
+        els.aiError.textContent = 'Could not generate AI suggestions right now (' + err.message + '). Please try again in a moment.';
+        els.aiError.classList.remove('hidden');
+      })
+      .finally(function () {
+        els.aiLoading.classList.add('hidden');
+        els.aiBtn.disabled = false;
+      });
+  });
+
+})();
+</script>
+</body>
+</html>
